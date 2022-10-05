@@ -1,6 +1,7 @@
 <launch>
-    <!-- node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen"/ -->
-    <node name="pong" pkg="turtle_pong" type="node" output="screen"/>
-    <node name="ball" pkg="turtle_pong" type="turtle_pong_ball" output="screen"/>
-    <node name="key" pkg="turtle_pong" type="turtle_pong_key" output="screen"/>
+    <arg name="node_start_delay" default="1.0" />
+    <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+    <node name="pong" pkg="turtle_pong" type="node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+    <node name="ball" pkg="turtle_pong" type="turtle_pong_ball" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " />
+    <node name="key"  pkg="turtle_pong" type="turtle_pong_key" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " />
 </launch>
