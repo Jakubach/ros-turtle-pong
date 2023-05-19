@@ -9,22 +9,14 @@ To learn how the package was created, please read the [documentation](https://fj
 
 ## Usage
 
-To use the `turtle_pong` package clone this repository into the `src` folder of your catkin workspace:
+To use the `turtle_pong` package clone this repository into the `src` folder of your catkin workspace, then build the workspace with `catkin_make` and source the new package:
 
 ```console
-fjp@ubuntu:/home/fjp/catkin_ws/src$ git clone https://github.com/fjp/ros-turtle-pong.git
-```
-
-Then build the workspace with `catking-tools` or `catkin_make` and source the new package:
-
-```console
-# catkin-tools:
-fjp@ubuntu:/home/fjp/catkin_ws$ catkin build
-# or use
-fjp@ubuntu:/home/fjp/catkin_ws$ catkin_make
-# source your workspace using the setup.bash or setup.zsh depening on your shell
-fjp@ubuntu:/home/fjp/catkin_ws$ source devel/setup.bash
-fjp@ubuntu:/home/fjp/catkin_ws$ source devel/setup.zsh
+cd ~/catkin_ws/src
+git clone https://github.com/Jakubach/ros-turtle-pong.git
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
 ```
 
 Finally start `roscore`, run `turtlesim` and `pong.launch`:
