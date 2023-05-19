@@ -29,7 +29,7 @@ roslaunch turtle_pong pong.launch
 
 Note that each of the three commands above should be executed from another terminal so that it will run in its own process.
 
-You can use one launch file:
+You can use one launch file instead of running these commands separately:
 
 ```console
 roslaunch turtle_pong pong_single_launch.launch
